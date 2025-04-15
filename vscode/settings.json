@@ -15,7 +15,7 @@
         {
             "before": ["<C-g>"],
             "commands": ["editor.action.revealDefinition"]
-        }
+        },
     ],
     "editor.lineNumbers": "relative"
 
