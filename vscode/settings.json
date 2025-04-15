@@ -1,0 +1,22 @@
+{
+    "workbench.sideBar.location": "right",
+    "workbench.editorAssociations": {
+        "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
+    },
+    "keyboard.dispatch": "keyCode",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["<C-x>"],
+            "commands": ["deleteLeft"]
+        }
+
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<C-g>"],
+            "commands": ["editor.action.revealDefinition"]
+        }
+    ],
+    "editor.lineNumbers": "relative"
+
+}
