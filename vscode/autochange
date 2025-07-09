@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Get current user's home directory
+USER_HOME="$HOME"
+CONFIG_DIR="$USER_HOME/.config/Code/User"
+
+# Path to the script's directory
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Files to copy/replace
+FILES=("settings.json" "keybindings.json")
+
+# Check if config directory exists
+if [ ! -d "$CONFIG_DIR" ]; then
+    echo "Error: Directory $CONFIG_DIR does not exist. Exiting."
+    exit 1
+fi
+
+# Process each file
+for FILE in "${FILES[@]}"; do
+    SRC="$SCRIPT_DIR/$FILE"
+    DEST="$CONFIG_DIR/$FILE"
+
+    if [ -f "$SRC" ]; then
+        echo "Copying $SRC to $DEST"
+        cp -f "$SRC" "$DEST"
+    else
+        echo "Source file $SRC not found. Skipping."
+    fi
+done
