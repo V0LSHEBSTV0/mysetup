@@ -17,6 +17,14 @@
             "commands": ["editor.action.revealDefinition"]
         },
     ],
-    "editor.lineNumbers": "relative"
+    "editor.lineNumbers": "relative",
+
+    "workbench.editor.tabSizing": "fixed",
+    "workbench.editor.tabSizingFixedMinWidth": 70,
+    "workbench.editor.tabSizingFixedMaxWidth": 200,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false
+
+
 
 }
